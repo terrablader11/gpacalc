@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./index.css">
+
+    <title>GPA Calculator</title>
+  </head>
+  <body>
+
+    <h1> GPA Calculator </h1>
+
+    <p> Should calculate correct GPA for those who want to know but who are too lazy. </p>
+
+    <p> Tips: </p>
+      <ul>
+        <li>Note that the entry is <b> semester grade</b>, not marking period or nine weeks grade. In order to find a semester's grade, get the number grade for each nine week and average them out. Or, for better accuracy, see your transcript. </li>
+        <li>Rounding rules are as follows: 0.5 rounds up, but 0.49 rounds down</li>
+        <li>Only the following classes count for Ranked GPA: Math classes, Science classes, Social Studies/History,  Language Arts/English, and LOTE.</li>
+      </ul> <br>
+
+
+    <table id="course-table">
+       <tr>
+         <th>Course Name</th>
+         <th>Course Type</th>
+         <th>Semester 1 Grade</th>
+         <th>Semester 2 Grade</th>
+      </tr>
+    </table><br>
+
+      <form>
+      <label for="cname">Course Name:</label><br>
+      <input type="text" id="cname" name="cname"><br> <br>
+        <label for="cname">Course Type </label><br>
+      <select name="ctype" id="ctype">
+    	<option value="Level 1">Level 1</option>
+        <option value="On-Level">On-Level</option>
+        <option value="Honors, GT/Honors">Honors, GT/Honors</option>
+        <option value="AP/IB">AP/IB</option>
+        <option value="Dual Credit">Dual Credit</option>
+      </select><br><br>
+    	<label for="grade1"> Semester 1 Grade: </label> <br>
+      <input type="text" id="grade1" name="grade1"> <br><br>
+      <label for="grade2"> Semester 2 Grade: </label> <br>
+      <input type="text" id="grade2" name="grade2"> <br><br>
+      <button id="addbutton" type="button" onclick="updateScreen()">Add Course</button> <br><br>
+      <button id="calcbutton" type="button" onclick="calculate()">Calculate GPA</button>
+      </form> 
+      
+      <p> Your GPA is <b id="gpaOutput"> 0.00 </b>.
+
+    <!-- JavaScript -->
+    <script src="./index.js"></script>
+  </body>
+</html>
